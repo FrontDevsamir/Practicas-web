@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.block-pad {
+    display: flex;
+    justify-content: center;
+    padding: 150px 0 150px 0;
+}
+
+a {
+    display: flex;
+    min-width: 275px;
+    padding: 25px 35px;
+    margin: 0 35px;
+    border-radius: 10px;
+    color: #53657D;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* ... GREY */
+.block-btn-grey {
+    background: #e3edf7;
+}
+
+.block-btn-grey a {
+    background: #e3edf7;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+/* ...BLUE */
+.block-btn-blue {
+    background: #CAD8ED;
+}
+
+.block-btn-blue a {
+    background: #CAD8ED;
+    box-shadow: 6px 6px 20px -1px #acb8c9,
+        -6px -6px 20px -1px #e8f8ff;
+}
+
+
+
+
+/* ...GREEN */
+.block-btn-green {
+    background: #72CAAF;
+}
+
+.block-btn-green a {
+    background: linear-gradient(145deg, #67b69e, #7ad8bb);
+    box-shadow: 6px 6px 20px -1px #61ac95,
+        -6px -6px 20px -1px #83e8c9;
+}
+
+
+
+/* ...YELLOW */
+.block-btn-yellow {
+    background: #FAEFDE;
+}
+
+.block-btn-yellow a {
+    background: linear-gradient(145deg, #ffffee, #e1d7c8);
+    box-shadow: 6px 6px 20px -1px #d5cbbd,
+        -6px -6px 20px -1px #ffffff;
+}
+
+
+
+
+/* ...RED */
+.block-btn-red {
+    background: #F283A5;
+}
+
+.block-btn-red a {
+    background: #F283A5;
+    box-shadow: inset 6px 6px 20px -1px #ce6f8c,
+        inset -6px -6px 20px -1px #ff97be;
+}
+
+
+
+
+/* ...BUTTON HOVER */
+.btn-hover {
+    background: #EBEBEB;
+    transition: all 2s;
+}
+
+.btn-hover a {
+    background: #EBEBEB;
+    box-shadow: 6px 6px 20px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 20px -1px rgba(255, 255, 255, 0.7);
+    transition: all 5s;
+}
+
+.btn-hover a:hover {
+    box-shadow: inset 4px 4px 10px -1px rgba(0, 0, 0, 0.15),
+        inset -4px -4px 10px -1px rgba(255, 255, 255, 0.7);
+}
+

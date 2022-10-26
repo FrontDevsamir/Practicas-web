@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+}
+
+
+
+:root 
+{
+    --shadow: -2px -2px 30px 2px #ddd;
+}
+
+
+
+
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background-color: #eee;
+    min-height: 100vh;
+    padding: 2em 0 0;
+    font-size: 18px;
+}
+/* ... ============================================================================= */
+
+
+/* ... Nav */
+.nav
+{
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    max-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 1s;
+    box-shadow: var(--shadow);
+    border-radius: 0 16px 16px 0;
+    background-color: #fff;
+}
+
+.nav__link
+{
+    color: #303440;
+    display: block;
+    padding: 10px 0;
+}
+
+.nav__link--inside 
+{
+    border-radius: 10px;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.nav__link--inside:hover 
+{
+    background-color: #f6f8fa;
+}
+
+
+.list
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.list__item 
+{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+.list__item--click
+{
+    cursor: pointer;
+}
+
+
+.list__button
+{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 0 auto;
+    width: 70%;
+    /* border: 2px solid green; */
+}
+
+
+.list__arrow
+{
+    margin-left: auto;
+    transition: transform .5s;
+}
+
+.list__img 
+{
+    color: steelblue;
+}
+
+.arrow .list__arrow
+{
+    transform: rotate(90deg);
+}
+
+
+
+.list__show
+{
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid #303440;
+    transition: height .5s;
+    height: 0;
+}
+
+
+/* ICONO DE MENU */
+.icon-menu
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.icon-menu__line
+{
+    width: 100%;
+    height: 3px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+
+
+.container
+{
+    width: 95%;
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-bottom: 4em;
+    box-shadow: var(--shadow);
+    border-radius: 1em;
+}
+
+
+/* ... HEADER */
+.header
+{
+    min-height: 90vh;
+    max-width: unset;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+
+/* ... MAIN */
+.main
+{
+    width: 100%;
+}
+
+
+.features
+{
+    min-height: 50vh;
+    padding: .1px;
+}
+
+.subtitle 
+{
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+.features-section
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    padding: 1em;
+    gap: 1.5em;
+    margin: 1em auto;
+}
+
+
+.article 
+{
+    min-height: 150px;
+    border-radius: 1em;
+    box-shadow: var(--shadow);
+}
+
+
+.about
+{
+    min-height: 80vh;
+}
+
+
+
+/* ...FOOTER */
+.footer 
+{
+    border-radius: 0;
+    width: 100%;
+    max-width: unset;
+    min-height: 40vh;
+    margin-bottom: 0;
+}
