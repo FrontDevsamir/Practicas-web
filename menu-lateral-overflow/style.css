@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+}
+
+
+
+:root 
+{
+    --shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    display: block;
+}
+
+
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background-color: #eee;
+    min-height: 100vh;
+    padding: 2em 0 0;
+    font-size: 18px;
+    width: 100%;
+    overflow-x: hidden;
+    background: #e3edf7;
+}
+/* ... ============================================================================= */
+
+
+/* ... Nav */
+.nav
+{
+    width: 100%;
+    height: 100vh;
+    max-width: 350px;
+    /* max-height: 100vh; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width .5s;
+    box-shadow: var(--shadow);
+    border-radius: 0 16px 16px 0;
+    background-color: #fff;
+    padding: 2em 0;
+}
+
+.nav__link
+{
+    color: #303440;
+    display: block;
+    padding: 10px 0;
+}
+
+.nav__link--inside 
+{
+    border-radius: 10px;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.nav__link--inside:hover 
+{
+    background-color: #f6f8fa;
+}
+
+
+.list
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 2em;
+}
+
+
+.list__item 
+{
+    width: 100%;
+}
+
+.list__item--click
+{
+    cursor: pointer;
+}
+
+
+.list__button
+{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 0 auto;
+    width: 70%;
+}
+
+
+.list__arrow
+{
+    margin-left: auto;
+    transition: transform .5s;
+}
+
+
+.arrow .list__arrow
+{
+    transform: rotate(90deg);
+}
+
+
+
+.list__show
+{
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid #303440;
+    transition: height .5s, transform .5s;
+    transform-origin: top left;
+    transform: scaleY(0);
+    height: 0;
+}
+
+
+/* ICONO DE MENU */
+.icon-menu
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.icon
+{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+/* ================================================================================== */
+.container 
+{
+    width: 95%;
+    max-width: 1300px;
+    border-radius: 1em;
+    box-shadow: var(--shadow);
+    margin-inline: auto;
+    margin-bottom: 5em;
+    background: #e3edf7;
+    padding: 1em 0;
+}
+
+.item 
+{
+    width: 95%;
+    margin-inline: auto;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: var(--shadow);
+    margin-bottom: 2em;
+}
+
+
+
+/* > HEADER */
+.header
+{
+    min-height: 90vh;
+    background: #e3edf7;
+}
+
+.header__logo
+{
+    min-height: 20vh;
+}
+
+.hero 
+{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 1em;
+    padding: 1.5em;
+}
+
+
+.hero__item
+{
+    margin: 0;
+    min-height: 50vh;
+}
+
+.title
+{
+    width: 100%;
+    max-width: 300px;
+}
+
+.paragraph
+{
+    min-height: 40vh;
+}
+
+.btn-main
+{
+    width: 100%;
+    max-width: 200px;   
+}
+
+
+
+
+/* > ----------------------------- MAIN ----------------------------- */
+.main
+{
+    min-height: 50vh;
+}
+
+.slider
+{
+    padding: 1em;
+}
+
+
+.slider__content 
+{
+    min-height: 30vh;
+}
+
+.slider__controls 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.control
+{
+    width: 100px;
+    margin: 0;
+}
