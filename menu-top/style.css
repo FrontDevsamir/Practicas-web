@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+}
+
+
+
+:root 
+{
+    --shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    display: block;
+}
+
+
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background-color: #eee;
+    min-height: 100vh;
+    padding: 2em 0 0;
+    font-size: 18px;
+    width: 100%;
+    overflow-x: hidden;
+    background: #e3edf7;
+}
+/* ... ============================================================================= */
+
+
+/* ... Nav */
+.nav
+{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: var(--shadow);
+    border-radius: 0 0 16px 16px;
+    background-color: #fff;
+    padding: 1.5em 2em;
+    display: flex;
+    align-items: flex-start;
+}
+
+.logo 
+{
+    font-size: 32px;
+    margin-left: auto;
+}
+
+.list 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    max-width: 350px;
+    padding: 100px 0 5px;
+    background-color: #fff;
+    transition: width .8s;
+    box-shadow: var(--shadow);
+}
+
+.list__container
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0;
+    font-size: 16px;
+    transition: padding .8s;
+}
+
+
+
+.list__item 
+{
+    width: 100%;
+}
+
+.list__item--click
+{
+    cursor: pointer;
+}
+
+
+.list__img 
+{
+    display: block;
+    padding: .2em;
+    width: 26px;
+    height: 20px;
+}
+
+
+.list__button
+{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+
+.nav__link
+{
+    color: #303440;
+    display: block;
+    padding: 10px 0;
+}
+
+.nav__link--inside 
+{
+    border-radius: 10px;
+    padding-left: 20px;
+    margin-left: 10px;
+    padding-right: 20px;
+    width: max-content;
+    position: relative;
+}
+
+.nav__link--inside::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 101%;
+    transform: translateY(-50%);
+    width: 10px;
+    background-color: #303440;
+    height: 2px;
+}
+
+.nav__link--inside:hover 
+{
+    background-color: #f6f8fa;
+}
+
+
+
+.list__arrow
+{
+    margin-left: auto;
+    transition: transform .5s;
+}
+
+
+.arrow .list__arrow
+{
+    transform: rotate(90deg);
+}
+
+
+
+.list__show
+{
+    width: calc(100% - 40px);
+    margin-left: auto;
+    border-left: 2px solid #303440;
+    transition: height .5s, transform .5s;
+    transform-origin: top left;
+    transform: scaleY(0);
+    height: 0;
+}
+
+
+/* ICONO DE MENU */
+.icon-menu
+{
+    position: absolute;
+    top: 32px;
+    right: 30px;
+    cursor: pointer;
+    transition: transform .5s;
+    transform: translateX(80px);
+    width: max-content;
+}
+
+.icon
+{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+/* ================================================================================== */
+.container 
+{
+    width: 95%;
+    max-width: 1300px;
+    border-radius: 1em;
+    box-shadow: var(--shadow);
+    margin-inline: auto;
+    margin-bottom: 5em;
+    background: #e3edf7;
+    padding: 1em 0;
+}
+
+.item 
+{
+    width: 95%;
+    margin-inline: auto;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: var(--shadow);
+    margin-bottom: 2em;
+}
+
+
+
+/* > HEADER */
+.header
+{
+    min-height: 90vh;
+    background: #e3edf7;
+}
+
+.header__logo
+{
+    min-height: 20vh;
+}
+
+.hero 
+{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 1em;
+    padding: 1.5em;
+}
+
+
+.hero__item
+{
+    margin: 0;
+    min-height: 50vh;
+}
+
+.title
+{
+    width: 100%;
+    max-width: 300px;
+}
+
+.paragraph
+{
+    min-height: 40vh;
+}
+
+.btn-main
+{
+    width: 100%;
+    max-width: 200px;   
+}
+
+
+
+
+/* > ----------------------------- MAIN ----------------------------- */
+.main
+{
+    min-height: 50vh;
+}
+
+.slider
+{
+    padding: 1em;
+}
+
+
+.slider__content 
+{
+    min-height: 30vh;
+}
+
+.slider__controls 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.control
+{
+    width: 100px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+
+    .list
+    {
+        position: unset;
+        max-width: unset;
+        position: unset;
+        width: max-content;
+        padding: 0;
+        height: 45px;
+        border-radius: .5em;
+        box-shadow: unset;
+    }
+
+    .list__container
+    {
+        flex-direction: row;
+        gap: 1em;
+        overflow: visible;
+        padding: 0;
+    }
+
+    .list__item
+    {
+        width: max-content;
+    }
+
+    .list__button
+    {
+        gap: .5em;
+    }
+
+    .list__arrow
+    {
+        margin: 0;
+    }
+
+    .icon-menu
+    {
+        display: none;
+    }
+
+}

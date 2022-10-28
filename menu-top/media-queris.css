@@ -1,0 +1,23 @@
+
+
+/* > MEDIA QUERIS PARA NAV */
+
+@media screen and (min-width: 1000px) {
+    .nav
+    {
+        height: 200px;
+        position: static;
+    }
+
+    .list
+    {
+        flex-direction: unset;
+        background-color: lime;
+    }
+
+    .list__arrow
+    {
+        margin: 0;
+        color: red;
+    }
+}
