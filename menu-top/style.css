@@ -42,7 +42,7 @@ body
     font-family: 'Poppins', sans-serif;
     background-color: #eee;
     min-height: 100vh;
-    padding: 2em 0 0;
+    padding: 100px 0 0;
     font-size: 18px;
     width: 100%;
     overflow-x: hidden;
@@ -71,6 +71,16 @@ body
 {
     font-size: 32px;
     margin-left: auto;
+    animation: bounce .5s cubic-bezier(.8, 0, 1, 1) infinite alternate;
+    line-height: 46px;
+    color: teal;
+    z-index: -1;
+}
+
+@keyframes bounce {
+    to {
+        transform: translateY(-5px);
+    }
 }
 
 .list 
@@ -334,7 +344,7 @@ body
         position: unset;
         width: max-content;
         padding: 0;
-        height: 45px;
+        height: 100%;
         border-radius: .5em;
         box-shadow: unset;
     }

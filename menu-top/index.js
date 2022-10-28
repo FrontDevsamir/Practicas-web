@@ -1,26 +1,42 @@
 
-
+let seleccionados = []
 
 // ...AQUI SE MUESTRA LAS SUBLISTAS
 let list_elements = document.querySelectorAll('.list__button--click')
 
 list_elements.forEach(element => {
     element.addEventListener('click', e => {
-        element.classList.toggle('arrow')
-        let height = 0
+
         let menu = element.nextElementSibling
+        let igual = false
 
-        if (menu.clientHeight == '0') {
-            height = menu.scrollHeight
-            menu.style.transform = 'scaleY(1)'
+        for (let i = 0; i < seleccionados.length; i ++) {
+            seleccionados[i][0].style.height = 0
+            seleccionados[i][0].style.transform = 'scaleY(0)'
+            seleccionados[i][1].classList.toggle('arrow')
+            igual = menu == seleccionados[i][0]
         }
 
-        else 
-        {
-            menu.style.transform = 'scaleY(0)'
+        seleccionados = []
+
+        if (!igual) {
+            element.classList.toggle('arrow')
+            let height = 0
+
+            if (menu.clientHeight == '0') {
+                height = menu.scrollHeight
+                menu.style.transform = 'scaleY(1)'
+                seleccionados.push([menu, element])
+            }
+
+            else 
+            {
+                menu.style.transform = 'scaleY(0)'
+            }
+
+            menu.style.height = `${height}px`
         }
 
-        menu.style.height = `${height}px`
     })
 })
 
