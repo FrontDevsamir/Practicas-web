@@ -49,6 +49,8 @@ let icon_menu = document.getElementById('icon-menu')
 icon_menu.addEventListener('click', e => {
     let nav_list = document.getElementById('nav_list')
     let list_container = document.getElementById('list_container')
+    let body = document.documentElement
+    body.classList.toggle('hidden')
 
     let width = nav_list.clientWidth
     let p_left = 0
@@ -71,7 +73,7 @@ icon_menu.addEventListener('click', e => {
         width = 0
         // p_left = 0
         // p_right = 0
-        icon_menu.style.transform = "translateX(80px)"
+        icon_menu.style.transform = "translateX(-80px)"
         icon.classList = []
         icon.classList.add('fa-solid', 'fa-bars', 'icon')
     }
