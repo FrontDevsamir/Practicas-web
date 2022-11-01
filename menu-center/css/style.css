@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+
+
+:root 
+{
+    --shadow: 6px 6px 20px -1px #61ac95,
+    -6px -6px 20px -1px #83e8c9;
+}
+
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+ul
+{
+    list-style: none;
+}
+
+
+body,
+html
+{
+    min-height: 100vh;
+}
+
+
+body
+{
+    background-color: #72CAAF;
+    display: flex;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+
+input
+{
+    display: none;
+}
+
+label
+{
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    display: flex;
+    box-shadow: var(--shadow);
+}
+
+.icon
+{
+    font-size: 32px;
+    transform-origin: 50% 50%%;
+    transition: margin-left .5s, transform .5s .5s;
+}
+
+
+
+input:checked ~ .nav label > .icon
+{
+    margin-left: 100px;
+    transform: rotate(180deg);
+}
+
+input:checked ~ .nav
+{
+    height: 300px;
+}
+
+.nav
+{
+    margin: auto;
+    height: 60px;
+    background-color: #72CAAF;
+    border-radius: .5em;
+    box-shadow: var(--shadow);
+    transition: height 1s 1s;
+    overflow: hidden;
+}
+
+
+
+.nav__ul
+{
+    padding: 1em 0;
+    color: #61ac95;
+    text-shadow: -.030em .030em #222, -.06em .06em #333;
+    font-size: 18px;
+}
+
+
+.nav__link
+{
+    padding: .5em 4em;
+}
+
+.nav__li
+{
+    width: 100%;
+    border-bottom: 1px solid #61ac95;
+}

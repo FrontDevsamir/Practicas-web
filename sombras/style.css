@@ -36,6 +36,13 @@ a {
 
 
 /* ... GREY */
+
+/* 
+    > #e3edf7 - hsl(210, 56%, 93%) - rgb(227, 237, 247)
+    > sombra oscura :  hsla(0, 0%, 0%, 15%) - rgba(0, 0, 0, 0.15)
+    > sombra clara : hsla(0, 0%, 100%, 70%) - rgba(255, 255, 255, 0.7)
+*/
+
 .block-btn-grey {
     background: #e3edf7;
 }
@@ -50,6 +57,11 @@ a {
 
 
 /* ...BLUE */
+/* 
+    > #CAD8ED - hsl(216, 49%, 86%) - rgb(202, 216, 237)
+    > sombra oscura : #acb8c9 - hsl(215, 21%, 73%) - rgb(172, 184, 201)
+    > sombra clara : #e8f8ff - hsl(198, 100%, 95%) - rgb(229, 247, 255)
+*/
 .block-btn-blue {
     background: #CAD8ED;
 }
@@ -64,6 +76,13 @@ a {
 
 
 /* ...GREEN */
+/* 
+    > #72CAAF - hsl(162, 45%, 62%) - rgb(114, 202, 176)
+    > gradient color 1 : #67b69e - hsl(162, 35%, 56%) - rgb(104, 182, 159)
+    > gradient color 2 : #7ad8bb - hsl(161, 55%, 66%) - rgb(121, 216, 186)
+    > sombra oscura : #61ac95 - hsl(162, 31%, 53%) - rgb(98, 172, 150)
+    > sombra clara : #83e8c9 - hsl(162, 69%, 71%) - rgb(130, 232, 201)
+*/
 .block-btn-green {
     background: #72CAAF;
 }
@@ -77,6 +96,13 @@ a {
 
 
 /* ...YELLOW */
+/* 
+    > #FAEFDE - hsl(36, 74%, 93%) - rgb(250, 240, 224)
+    > gradient color 1 : #ffffee - hsl(60, 100%, 97%) - rgb(255, 255, 240)
+    > gradient color 2 : #e1d7c8 - hsl(36, 29%, 83%) - rgb(224, 214, 199)
+    > sombra oscura : #d5cbbd - hsl(35, 22%, 79%) - rgb(213, 203, 190)
+    > sombra clara : #ffffff - hsl(0, 0% 100%) - rgb(255, 255, 255)
+*/
 .block-btn-yellow {
     background: #FAEFDE;
 }
@@ -91,6 +117,11 @@ a {
 
 
 /* ...RED */
+/* 
+    > #F283A5 - hsl(342, 81%, 73%) - rgb(242, 130, 164)
+    > sombra inset 1 : #ce6f8c - hsl(342, 49%, 62%) - rgb(206, 111, 139)
+    > sombra inset 2 : #ff97be - hsl(338, 100%, 80%) - rgb(255, 153, 190)
+*/
 .block-btn-red {
     background: #F283A5;
 }
@@ -104,7 +135,13 @@ a {
 
 
 
+
 /* ...BUTTON HOVER */
+/* 
+    > #EBEBEB - hsl(0, 0%, 92%) - rgb(235, 235, 235)
+    > sombra oscura : hsla(0, 0%, 0%, 15%) - rgba(0, 0, 0, 0.15)
+    > sombra clara : hsla(0, 0%, 100%, 70%) - rgba(255, 255, 255, 0.7)
+*/
 .btn-hover {
     background: #EBEBEB;
     transition: all 2s;

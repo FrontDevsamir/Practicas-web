@@ -1,0 +1,194 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+
+
+:root 
+{
+    --shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    font: inherit;
+}
+
+
+a
+{
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul
+{
+    list-style: none;
+}
+
+
+
+body,
+html
+{
+    min-height: 100vh;
+}
+
+
+body
+{
+    background-color: #e3edf7;
+    font-family: 'Hammersmith One', sans-serif;
+    color: #9A00BF;
+    font-size: 16px;
+}
+
+
+/* ... NAV */
+.nav 
+{
+    background-color: #e3edf7;
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    box-shadow: var(--shadow);
+    padding: 1em 1em;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 0 0 16px 16px;
+}
+
+
+
+.logo
+{
+    font-size: 40px;
+    margin-right: auto;
+}
+
+
+/* ... MENU HAMBUR */
+.bars__menu
+{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.bars__menu span
+{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #9A00BF;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: transform .5s, margin-left .5s, opacity .5s;
+}
+
+.activeline1__bars-menu
+{
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.activeline2__bars-menu
+{
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.activeline3__bars-menu
+{
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+
+
+/* ... LIST MENU */
+.nav__ul
+{
+    width: 0;
+    max-width: 350px;
+    position: fixed;
+    top: 82px;
+    left: 0;
+    height: 100vh;
+    box-shadow: var(--shadow);
+    background: #e3edf7;
+    padding: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    transition: width .5s, padding .5s;
+    overflow: hidden;
+}
+
+
+.nav__ul--visible
+{
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+.nav__link
+{
+    padding: .5em 1em;
+    border-radius: 1em;
+    transition: background-color .5s;
+}
+
+
+.nav__link:hover
+{
+    background-color: #9A00BF55;
+}
+
+
+
+
+
+.hero 
+{
+    height: 150vh;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: var(--shadow);
+    border-radius: 1em;
+}
+
+
+
+
+/* ... QUERIS */
+@media screen and (min-width: 800px) {
+
+    .bars__menu
+    {
+        display: none;
+    }
+
+    .nav__ul
+    {
+        position: unset;
+        max-width: unset;
+        gap: 1em;
+        width: max-content;
+        flex-direction: row;
+        height: 100%;
+        padding: .5em 0;
+        box-shadow: unset;
+    }
+}
+
+
