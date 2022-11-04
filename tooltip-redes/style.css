@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&display=swap');
+
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+:root 
+{
+    --bg: hsl(181, 54%, 42%);
+    --shadow: 6px 6px 20px -2px hsl(181, 54%, 22%), 
+                -6px -6px 20px -2px hsl(181, 54%, 62%);
+
+                
+    --shadow-hover: 4px 4px 20px -1px hsl(181, 54%, 22%), 
+                -4px -4px 20px -1px hsl(181, 54%, 62%);
+
+
+    --shadow-inset: 6px 6px 20px -6px hsl(181, 54%, 22%) inset, 
+    -6px -6px 20px -6px hsl(181, 54%, 72%) inset;
+}
+
+
+
+body 
+{
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--bg);
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: 700;
+}
+
+
+.redes
+{
+    margin: auto;
+    padding: 1.5em 3em;
+    background-color: var(--bg);
+    box-shadow: var(--shadow-inset);
+    border-radius: 1em;
+
+    display: flex;
+    gap: 1.5em;
+}
+
+.red 
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    text-align: center;
+    position: relative;
+    transition: box-shadow .5s, transform .5s;
+    cursor: pointer;
+}
+
+.icon 
+{
+    font-size: 1.5rem;
+    line-height: 50px;
+    transition: color .5s;
+}
+
+.red > span 
+{
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+    padding: .5em 1em;
+    border-radius: .5em;
+    transform: translateX(-25%);
+    transition: opacity .5s;
+    opacity: 0;
+}
+
+
+.red:hover 
+{
+    box-shadow: var(--shadow-hover);
+    transform: scale(.9);
+}
+
+.red:hover .icon 
+{
+    color: var(--color);
+}
+
+.red:hover span 
+{
+    color: var(--color);
+}
+
+.red--facebook:hover > .tooltip-facebook
+{
+    opacity: 1;
+}
+
+
+.red--twiter:hover > .tooltip-twiter
+{
+    opacity: 1;
+}
+
+.red--instagram:hover > .tooltip-instagram
+{
+    opacity: 1;
+}
+
+.red--discord:hover > .tooltip-discord
+{
+    opacity: 1;
+}
+
+.red--twitch:hover > .tooltip-twitch
+{
+    opacity: 1;
+
+}
