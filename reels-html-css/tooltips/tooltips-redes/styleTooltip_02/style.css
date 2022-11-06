@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&display=swap');
+
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+:root 
+{
+    --bg: hsl(220, 45%, 90%);
+    --shadow: 6px 6px 20px -2px hsl(220, 43%, 80%), 
+                -6px -6px 20px -2px hsl(0, 0%, 100%);
+
+                
+    --shadow-hover: 4px 4px 20px -1px hsl(220, 43%, 80%), 
+                    -4px -4px 20px -1px hsl(0, 0%, 100%);
+
+
+    --shadow-inset: 6px 6px 20px -6px hsl(220, 43%, 80%) inset, 
+                    -6px -6px 20px -6px hsl(0, 0%, 100%) inset;
+
+    --shadow-hover-inset: 6px 6px 20px -2px hsl(220, 43%, 80%), 
+            -6px -6px 20px -2px hsl(0, 0%, 100%), 6px 6px 20px -6px hsl(220, 43%, 80%) inset, 
+            -6px -6px 20px -6px hsl(0, 0%, 100%) inset;
+}
+
+
+
+body 
+{
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--bg);
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: 700;
+}
+
+
+.redes
+{
+    margin: auto;
+    padding: 1.5em 3em;
+
+    display: flex;
+    gap: 1.5em;
+}
+
+.red 
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 2em;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: box-shadow .5s, width .5s;
+    cursor: pointer;
+    overflow: hidden;
+    
+    display: flex;
+    align-items: center;
+}
+
+.icon 
+{
+    font-size: 1.8rem;
+    line-height: 60px;
+    min-width: 60px;
+    transition: color .5s;
+}
+
+
+
+.red:hover 
+{
+    box-shadow: var(--shadow-hover-inset);
+    border: 2px solid var(--bg);
+    color: var(--color);
+    width: 150px;
+}
+
+

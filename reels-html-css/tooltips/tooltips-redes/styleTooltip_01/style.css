@@ -16,17 +16,21 @@
 
 :root 
 {
-    --bg: hsl(181, 54%, 42%);
-    --shadow: 6px 6px 20px -2px hsl(181, 54%, 22%), 
-                -6px -6px 20px -2px hsl(181, 54%, 62%);
+    --bg: hsl(220, 45%, 90%);
+    --shadow: 6px 6px 20px -2px hsl(220, 43%, 80%), 
+                -6px -6px 20px -2px hsl(0, 0%, 100%);
 
                 
-    --shadow-hover: 4px 4px 20px -1px hsl(181, 54%, 22%), 
-                -4px -4px 20px -1px hsl(181, 54%, 62%);
+    --shadow-hover: 4px 4px 20px -1px hsl(220, 43%, 80%), 
+                    -4px -4px 20px -1px hsl(0, 0%, 100%);
 
 
-    --shadow-inset: 6px 6px 20px -6px hsl(181, 54%, 22%) inset, 
-    -6px -6px 20px -6px hsl(181, 54%, 72%) inset;
+    --shadow-inset: 6px 6px 20px -6px hsl(220, 43%, 80%) inset, 
+                    -6px -6px 20px -6px hsl(0, 0%, 100%) inset;
+
+    --shadow-hover-inset: 6px 6px 20px -2px hsl(220, 43%, 80%), 
+            -6px -6px 20px -2px hsl(0, 0%, 100%), 6px 6px 20px -6px hsl(220, 43%, 80%) inset, 
+            -6px -6px 20px -6px hsl(0, 0%, 100%) inset;
 }
 
 
@@ -45,9 +49,6 @@ body
 {
     margin: auto;
     padding: 1.5em 3em;
-    background-color: var(--bg);
-    box-shadow: var(--shadow-inset);
-    border-radius: 1em;
 
     display: flex;
     gap: 1.5em;
@@ -55,20 +56,21 @@ body
 
 .red 
 {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     box-shadow: var(--shadow);
     text-align: center;
     position: relative;
     transition: box-shadow .5s, transform .5s;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .icon 
 {
-    font-size: 1.5rem;
-    line-height: 50px;
+    font-size: 1.8rem;
+    line-height: 60px;
     transition: color .5s;
 }
 
@@ -80,6 +82,7 @@ body
     background-color: var(--bg);
     box-shadow: var(--shadow);
     padding: .5em 1em;
+    font-size: 1.3rem;
     border-radius: .5em;
     transform: translateX(-25%);
     transition: opacity .5s;
@@ -89,43 +92,15 @@ body
 
 .red:hover 
 {
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover-inset);
     transform: scale(.9);
-}
-
-.red:hover .icon 
-{
+    border: 2px solid var(--bg);
     color: var(--color);
+    overflow: visible;
 }
 
-.red:hover span 
-{
-    color: var(--color);
-}
-
-.red--facebook:hover > .tooltip-facebook
+.red:hover > span 
 {
     opacity: 1;
 }
 
-
-.red--twiter:hover > .tooltip-twiter
-{
-    opacity: 1;
-}
-
-.red--instagram:hover > .tooltip-instagram
-{
-    opacity: 1;
-}
-
-.red--discord:hover > .tooltip-discord
-{
-    opacity: 1;
-}
-
-.red--twitch:hover > .tooltip-twitch
-{
-    opacity: 1;
-
-}
