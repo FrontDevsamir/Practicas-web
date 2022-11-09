@@ -45,16 +45,16 @@ body
 }
 
 
-.redes
+.redes 
 {
     margin: auto;
     padding: 1.5em 3em;
-
     display: flex;
     gap: 1.5em;
 }
 
-.red 
+
+.red
 {
     width: 60px;
     height: 60px;
@@ -67,12 +67,15 @@ body
     overflow: hidden;
 }
 
+
 .icon 
 {
     font-size: 1.8rem;
     line-height: 60px;
     transition: color .5s;
 }
+
+
 
 .red > span 
 {
@@ -81,12 +84,12 @@ body
     left: 0;
     background-color: var(--bg);
     box-shadow: var(--shadow);
-    padding: .5em 1em;
     font-size: 1.3rem;
+    padding: .5em 1em;
     border-radius: .5em;
     transform: translateX(-25%);
-    transition: opacity .5s;
     opacity: 0;
+    transition: opacity .5s;
 }
 
 
@@ -99,8 +102,17 @@ body
     overflow: visible;
 }
 
+
 .red:hover > span 
 {
     opacity: 1;
 }
 
+
+
+@media screen and (max-width: 500px) {
+    .redes 
+    {
+        flex-direction: column;
+    }
+}

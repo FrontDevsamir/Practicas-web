@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+
+*,
+::before,
+::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: inherit;
+    font-weight: inherit;
+}
+
+
+:root 
+{
+    --color: #335;
+    --color-hover: #339;
+    --bg: hsl(220, 45%, 90%);
+    --bg-li-hover: hsl(220, 45%, 88%);
+
+    --shadow: 6px 6px 20px -2px hsl(220, 43%, 80%), 
+    -6px -6px 20px -2px hsl(0, 0%, 100%);
+
+    --shadow-active: 3px 3px 2px hsl(220, 43%, 80%),
+                     -3px -3px 2px  hsl(220, 43%, 80%);
+}
+
+
+ul
+{
+    list-style: none;
+}
+
+a 
+{
+    all: unset;
+    font-weight: 500;
+    display: block;
+}
+
+img 
+{
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+body 
+{
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    background-color: var(--bg);
+    color: var(--color);
+}
+
+
+.container
+{
+    margin: auto;
+    box-shadow: var(--shadow);
+    border-radius: 2em;
+    width: 50px;
+    max-width: 50px;
+    height: 50px;
+    overflow: hidden;
+    transition: width .5s .3s, padding .5s .3s, .5s .3s, padding-top .5s, height .5s;
+}
+
+.container:hover
+{
+    transition: width 1s, padding .5s .8s, padding-top .5s .8s, height .5s .5s;
+    width: 90%;
+    max-width: 380px;
+    height: 500px;
+    padding: 0 1.5em;
+    padding-top: 1em;
+    border-radius: 1em;
+}
+
+
+.container:hover > .heading 
+{
+    padding: .5em 1em;
+    transition: padding .5s .5s;
+}
+
+.container:hover .heading__info
+{
+    transition: padding .5s .2s, height .5s .3s;
+    padding: .5em 1em;
+    height: 60px;
+}
+
+
+.heading
+{
+    display: flex;
+    box-shadow: var(--shadow);
+    border-radius: 1em;
+    align-items: center;
+    transition: padding .5s;
+}
+
+.container-icon 
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+}
+
+.perfil
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    border: 2px solid var(--color);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.heading__info
+{
+    height: 0;
+    overflow: hidden;
+    transition: padding .5s, height .5s;
+}
+
+.name 
+{
+    font-size: 1.2rem;
+}
+
+.role 
+{
+    font-size: .7rem;
+    font-weight: 500;
+}
+
+
+.icon 
+{
+    font-size: 1.2rem;
+    margin: 0 .5em;
+    transition: transform 1s;
+}
+
+.icon--toogle 
+{
+    font-size: 1.5rem;
+    margin-left: auto;
+}
+
+.dropdown 
+{
+    box-shadow: var(--shadow);
+    margin-top: 1em;
+    padding: .5em 1em;
+    border-radius: .5em;
+}
+
+.li 
+{
+    display: flex;
+    margin-top: 1em;
+    align-items: center;
+    padding: 1em;
+    padding-right: 0em;
+    border-radius: .5em;
+    width: 100%;
+    cursor: pointer;
+}
+
+.li:hover 
+{
+    color: var(--color-hover);
+    background-color: var(--bg-li-hover);
+}
+
+.li:hover > .icon:not([class$='toogle'])
+{
+    transform: rotate(-15deg);
+    color: var(--color-icon);
+}
+
